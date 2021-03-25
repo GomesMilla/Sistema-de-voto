@@ -1,12 +1,64 @@
+{% load static %}
+
 <!DOCTYPE html>
-<html lang="en">
+<html lang="pt-br">
+
 <head>
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <script src="https://kit.fontawesome.com/2cbdb08e7a.js" crossorigin="anonymous"></script>
+    <link rel="stylesheet" href="{% static 'css/styles.css' %}">
+    <link rel="preconnect" href="https://fonts.gstatic.com">
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300&display=swap" rel="stylesheet">
     <title>Opção de voto</title>
 </head>
-<body>
-    <h1>CAMILA ADRIANA</h1>
+
+<body class= "body_opcao">
+    
+    <nav class="nav-opcao">
+        <ul>
+          <li><a href="{% url 'cadastrar_pessoa' %}"><i class="fas fa-plus-circle"></i>Cadastrar pessoa</a></li>
+          <li><a href="{% url 'opcao_de_voto' %}"><i class="fas fa-plus-circle"></i>Opção de voto</a></li>
+          <li><a href="{% url 'Votacao_em_si' %}"><i class="fas fa-plus-circle"></i>Votação</a></li>
+          
+        </ul>
+      </nav>
+
+    <main class="container-opcao">
+        <h1>OPÇÃO DE VOTO</h1>
+        <form action="">
+            <div>
+                <input class="input-field-opcao" type="text" type="name" id="name" placeholder="Nome:">
+            </div>
+      <br>
+        
+            <div >
+                <input class="input-field-opcao" type="codigo" type="codigo" id="codigo" placeholder="Voto/Código:">
+            </div>
+            <div>
+                <p>(*)Os campos são obrigatórios!</p>
+            </div>
+            <div>
+                <input class="button-opcao" type="submit" value="Continue">
+            </div>
+        </form>
+        <br>
+       
+            
+            <div class="footer-copyright">
+              <div class="container">
+                        © 2021 
+              </div>
+            </div>
+          </footer>
+              
+        
+        
+        
+
+    </main>
+
 </body>
+
 </html>

@@ -17,7 +17,7 @@ class VotacaoForm(forms.ModelForm):
             "nome", "descricao", "data_inicio", "data_termino",
         )
 
-class OpcaoVoto(forms.ModelForm):
+class OpcaoVotoForm(forms.ModelForm):
    
     class Meta:
         model = OpcaoVoto

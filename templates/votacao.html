@@ -1,12 +1,69 @@
+{% load static %}
+
 <!DOCTYPE html>
-<html lang="en">
+<html lang="pt-br">
+
 <head>
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Document</title>
+    <script src="https://kit.fontawesome.com/2cbdb08e7a.js" crossorigin="anonymous"></script>
+    <link rel="stylesheet" href="{% static 'css/estilovotacao.css' %}">
+    <link rel="preconnect" href="https://fonts.gstatic.com">
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300&display=swap" rel="stylesheet">
+    
+    <title>VOTAÇÃO</title>
 </head>
-<body>
-    <h1>SEI LÁ</h1>
+
+<bodys>
+    <nav class="nav">
+        <ul>
+          <li><a href="{% url 'cadastrar_pessoa' %}"><i class="fas fa-plus-circle"></i>Cadastrar pessoa</a></li>
+          <li><a href="{% url 'opcao_de_voto' %}"><i class="fas fa-plus-circle"></i>Opção de voto</a></li>
+          <li><a href="{% url 'Votacao_em_si' %}"><i class="fas fa-plus-circle"></i>Votação</a></li>
+          
+        </ul>
+      </nav>
+
+    <main class="container">
+        <h1>VOTAÇÃO</h1>
+        <p>(*)Os campos são obrigatórios!</p>
+        <form action="">
+            <div>
+                <p>Nome:</p>
+                <input class="input-field" type="text" type="name" id="name" placeholder="Nome:">
+                <p>Data e hora de inicio:</p>
+                <input class="input-data" type="date" type="date" id="date" id="date" placeholder="Data Fim:">
+                <input class="input-time" type="time" appt name="appt" type= "time"min="09:00" max="18:00" required> 
+                <p>Data e hora do fim:</p>
+                <input class="input-data" type="date" type="date" id="date" id="date" placeholder="Data Fim:">
+                <input class="input-time" id="appt" name="appt" type= "time"min="09:00" max="18:00" required> 
+                <p>Descrição:</p>
+                <textarea class="input-field">
+
+                </textarea>
+            </div>
+            
+               
+            
+            <div>
+                <input class="button" type="submit" value="Continue">
+            </div>
+        </form>
+        <br>
+        <div class="footer-copyright">
+              <div class="container">
+                        © 2021 
+              </div>
+            </div>
+          </footer>
+              
+        
+        
+        
+
+    </main>
+
 </body>
+
 </html>

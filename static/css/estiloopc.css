@@ -1,0 +1,84 @@
+@import url('https://fonts.googleapis.com/css2?family=Inter:wght@300&display=swap');
+* {
+    margin: 0%;
+    padding: 0;
+    border: 0;
+    box-sizing: border-box;
+    font-family: 'Inter', sans-serif;
+}
+
+body {
+    background: linear-gradient(45deg, #800c1b, hsl(0, 79%, 50%), #fa8080);
+    background-repeat: no-repeat;
+    min-height: 100vh;
+    min-width: 100vw;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+main.container {
+    border-radius: 8px;
+    background-color: rgb(253, 253, 253);
+    color: rgb(141, 12, 12);
+    max-width: 400px;
+    min-height: 400px;
+    padding: 4rem;
+    box-shadow: 5px 5px 5px, rgb(0, 14, 17)
+}
+
+main h1 {
+    font-weight: 10000;
+    margin-bottom: 2rem;
+    position: relative;
+}
+
+
+.input-field {
+    font-size: 0.9rem;
+    background-color: rgb(231, 134, 134);
+    align-items: center;
+    width: 100%;
+    border-radius: 6px;
+    font-size: 1.2rem;
+    color: rgba(212, 74, 74, 0.7);
+    align-items: center;                
+  
+    padding: 80px;
+    border-radius: 8px;
+    padding: 0.4em;
+    margin-top: 2%;
+    
+}
+
+   
+form .button {
+    
+    border-radius: 5px;
+    background-color: rgb(238, 22, 22);
+    padding: 0.9em;
+    margin-top: 30%;
+    border: 2px solid rgb(233, 59, 59);
+    box-shadow: 2px 2px 2px rgb(218, 13, 13);
+    align-items: center;
+    width: 100%;
+    color: rgb(245, 245, 248);
+}
+.nav{
+    position:absolute;
+    left:0%;
+    top: 0;
+    background-color: rgb(253, 253, 253);
+    background-repeat: no-repeat;
+    min-height: 30vh;
+    min-width: 30vh;
+    display:flex;
+    margin-top: 0.5rem;
+    box-shadow: 2px 2px 2px rgb(1, 2, 1);
+    border: 1px solid rgb(251, 253, 251);
+}
+.nav ul li{
+    background-color: purple;
+
+}
+

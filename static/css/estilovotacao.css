@@ -1,0 +1,131 @@
+@import url('https://fonts.googleapis.com/css2?family=Inter:wght@300&display=swap');
+* {
+    margin: 0%;
+    padding: 0;
+    border: 0;
+    box-sizing: border-box;
+    font-family: 'Inter', sans-serif;
+}
+
+body {
+    background: linear-gradient(45deg, #074d07, hsl(118, 79%, 50%), #115f11);
+    background-repeat: no-repeat;
+    min-height: 100vh;
+    min-width: 100vw;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+main.container {
+    border-radius: 8px;
+    background-color: rgb(253, 253, 253);
+    color: rgb(5, 66, 26);
+    max-width: 800px;
+    min-height: 500px;
+    padding: 1rem;
+    box-shadow: 5px 5px 5px, rgb(12, 168, 82)
+}
+
+main h1 {
+    font-weight: 10000;
+    margin-bottom: 2rem;
+    position: relative;
+}
+
+
+.input-field {
+    font-size: 0.9rem;
+    background-color: rgb(134, 231, 166);
+    align-items: center;
+    width: 100%;
+    border-radius: 6px;
+    font-size: 1.2rem;
+    color: rgb(0, 0, 0);
+    align-items: center;                
+    padding: 80px;
+    border-radius: 8px;
+    padding: 0.4em;
+    margin-top: 2%;
+    
+}
+.input-time{
+    font-size: 0.9rem;
+    background-color: rgb(134, 231, 166);
+    align-items: center;
+    width: 100%;
+    border-radius: 6px;
+    font-size: 1.2rem;
+    color: rgba(0, 0, 0, 0.993);
+    align-items: center;                
+    padding: 80px;
+    border-radius: 8px;
+    padding: 0.4em;
+    margin-top: 2%;
+
+}
+.input-data{
+    font-size: 0.9rem;
+    background-color: rgb(134, 231, 166);
+    align-items: center;
+    width: 100%;
+    border-radius: 6px;
+    font-size: 1.2rem;
+    color: rgba(0, 0, 0, 0.993);
+    align-items: center;                
+    padding: 80px;
+    border-radius: 8px;
+    padding: 0.4em;
+    margin-top: 2%;
+
+}
+
+form .button {
+    
+    border-radius: 5px;
+    background-color: rgb(45, 216, 45);
+    padding: 0.9em;
+    margin-top: 10%;
+    border: 2px solid rgb(59, 233, 73);
+    box-shadow: 2px 2px 2px rgb(1, 2, 1);
+    align-items: center;
+    width: 100%;
+    color: rgb(245, 245, 248);
+}
+
+.footer-copyright{
+    align-items: center;
+}
+
+.nav ul li{ 
+    background-color:hsl(210, 11%, 96%);
+    padding: 80px;
+    border-radius: 20px;
+    padding: 0.4em;
+    margin-top: 2%;
+    box-shadow: 4px 4px 4px rgb(23, 129, 179);
+/* Todos os li dentro da nav vão ter essas caracteristicas */    */
+    
+}
+.nav{
+    position:absolute;
+    left:0%;
+    top: 0;
+    /* background-color: hsl(194, 100%, 82%); */
+    background-repeat: no-repeat;
+    min-height: 30vh;
+    min-width: 30vh;
+    display:flex;
+    margin-top: 0.5rem;
+    color: black;
+    /* box-shadow: 2px 2px 2px rgb(1, 2, 1); */
+    /* border: 1px solid rgb(251, 253, 251); */
+}
+
+.nav a{
+    color:rgb(0, 0, 3); 
+    /* A ideia é que todos os "as" dentro do li vao ser pretos usando .nav a */ 
+    text-decoration:none; 
+}
+
+

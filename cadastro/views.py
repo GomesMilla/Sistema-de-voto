@@ -4,6 +4,10 @@ from django.shortcuts import(
 )
 from cadastro.models import *
 from cadastro.forms import PessoaForm
+from cadastro.forms import VotacaoForm
+from cadastro.forms import OpcaoVotoForm
+
+
 from templates import *
 
 
