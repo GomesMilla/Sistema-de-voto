@@ -1,0 +1,38 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <script src="https://kit.fontawesome.com/2cbdb08e7a.js" crossorigin="anonymous"></script>
+    <link rel="stylesheet" href="{% static 'static/css/.styles.css' %}">
+    <link rel="preconnect" href="https://fonts.gstatic.com">
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300&display=swap" rel="stylesheet">
+    <title>Cadastrar pessoa</title>
+</head>
+
+<body>
+    <main class="container">
+        <h1>Sistema de eleição</h1>
+        <nav class="nav">
+            <ul>
+                <li><a href="{%url 'cadastrar_pessoa' %}"><i class="fas fa-plus-circle"></i>Cadastrar pessoa</a></li>
+                <li><a href="{%url 'registrar_opcao_de_voto' %}"><i class="fas fa-plus-circle"></i> Cadastrar opção de voto</a></li>
+                <li><a href="{%url 'registrar_votacao' %}"><i class="fas fa-plus-circle"></i>Cadastrar votação</a></li>
+
+            </ul>
+        </nav>
+
+        <footer>
+            <div class="footer-copyright">
+                <div class="container">
+                    Sistema de votação brasileiro © 2021
+                </div>
+            </div>
+        </footer>
+    </main>
+
+</body>
+
+</html>

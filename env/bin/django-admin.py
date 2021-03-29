@@ -1,4 +1,4 @@
-#!/home/f0994814/camila/env/bin/python
+#!/home/camila/trabalho/Sistema-de-voto/env/bin/python
 from django.core import management
 
 if __name__ == "__main__":

@@ -33,7 +33,6 @@ main h1 {
     position: relative;
 }
 
-
 .input-field {
     font-size: 0.9rem;
     background-color: rgb(162, 241, 251);
@@ -42,14 +41,13 @@ main h1 {
     border-radius: 6px;
     font-size: 1.2rem;
     color: rgba(55, 62, 124, 0.7);
-    align-items: center;                
-  
+    align-items: center;
     padding: 80px;
     border-radius: 8px;
     padding: 0.4em;
     margin-top: 2%;
-    
 }
+
 .input-data {
     font-size: 0.9rem;
     background-color: rgb(162, 241, 251);
@@ -58,16 +56,14 @@ main h1 {
     border-radius: 6px;
     font-size: 1.2rem;
     color: rgba(55, 62, 124, 0.7);
-    align-items: center;                
+    align-items: center;
     padding: 80px;
     border-radius: 8px;
     padding: 0.4em;
     margin-top: 2%;
-    
 }
-   
+
 form .button {
-    
     border-radius: 5px;
     background-color: rgb(18, 207, 240);
     padding: 0.9em;
@@ -78,35 +74,33 @@ form .button {
     width: 100%;
     color: rgb(2, 1, 7);
 }
-.nav ul li{ 
-    background-color:hsl(210, 11%, 96%);
+
+.nav ul li {
+    background-color: hsl(210, 11%, 96%);
     padding: 80px;
     border-radius: 20px;
     padding: 0.4em;
     margin-top: 2%;
     box-shadow: 4px 4px 4px rgb(23, 129, 179);
-/* Todos os li dentro da nav vão ter essas caracteristicas */   
-    
+    /* Todos os li dentro da nav vão ter essas caracteristicas */
 }
-.nav{
-    position:absolute;
-    left:0%;
+
+.nav {
+    position: absolute;
+    left: 0%;
     top: 0;
-    /* background-color: hsl(194, 100%, 82%); */
     background-repeat: no-repeat;
     min-height: 30vh;
     min-width: 30vh;
-    display:flex;
+    display: flex;
     margin-top: 0.5rem;
     color: black;
-    /* box-shadow: 2px 2px 2px rgb(1, 2, 1); */
-    /* border: 1px solid rgb(251, 253, 251); */
 }
 
-.nav a{
-    color:rgb(0, 0, 3); 
-    /* A ideia é que todos os "as" dentro do li vao ser pretos usando .nav a */ 
-    text-decoration:none; 
+.nav a {
+    color: rgb(0, 0, 3);
+    /* A ideia é que todos os "as" dentro do li vao ser pretos usando .nav a */
+    text-decoration: none;
 }
 
 .body_opcao {
@@ -119,7 +113,7 @@ form .button {
     justify-content: center;
 }
 
-main.container-opcao{
+main.container-opcao {
     border-radius: 8px;
     background-color: rgb(252, 252, 252);
     color: rgb(231, 76, 76);
@@ -135,7 +129,6 @@ main h1 {
     position: relative;
 }
 
-
 .input-field-opcao {
     font-size: 0.9rem;
     background-color: rgb(238, 111, 111);
@@ -144,75 +137,89 @@ main h1 {
     border-radius: 6px;
     font-size: 1.2rem;
     color: rgba(187, 91, 99, 0.7);
-    align-items: center;                
-  
+    align-items: center;
     padding: 80px;
     border-radius: 8px;
     padding: 0.4em;
     margin-top: 2%;
-    
 }
-.input-data-opcao{
+
+.input-data-opcao {
+    font-size: 0.9rem;
+    background-color: rgb(251, 162, 162);
+    align-items: center;
+    width: 100%;
+    border-radius: 6px;
+    font-size: 1.2rem;
+    color: rgba(139, 7, 25, 0.7);
+    align-items: center;
+    padding: 80px;
+    border-radius: 8px;
+    padding: 0.4em;
+    margin-top: 2%;
+}
+
+form .button-opcao {
+    border-radius: 5px;
+    background-color: rgb(240, 18, 18);
+    padding: 0.9em;
+    margin-top: 30%;
+    border: 2px solid rgb(195, 29, 29);
+    box-shadow: 2px 2px 2px rgb(129, 22, 22);
+    align-items: center;
+    width: 100%;
+    color: rgb(114, 102, 44);
+}
+
+.nav-opcao ul li {
+    background-color: hsl(210, 11%, 96%);
+    padding: 80px;
+    border-radius: 20px;
+    padding: 0.4em;
+    margin-top: 2%;
+    box-shadow: 4px 4px 4px rgb(179, 23, 23);
+    /* Todos os li dentro da nav vão ter essas caracteristicas */
+}
+
+.nav-opcao a {
+    color: rgb(0, 0, 3);
+    /* A ideia é que todos os "as" dentro do li vao ser pretos usando .nav a */
+    text-decoration: none;
+}
+
+.nav-opcao {
+    position: absolute;
+    left: 0%;
+    top: 0;
+    background-repeat: no-repeat;
+    min-height: 30vh;
+    min-width: 30vh;
+    display: flex;
+    margin-top: 0.5rem;
+    color: black;
+}
+
+.container-opcao {
     font-size: 0.9rem;
     background-color: rgb(162, 241, 251);
     align-items: center;
     width: 100%;
     border-radius: 6px;
     font-size: 1.2rem;
-    color: rgba(55, 62, 124, 0.7);
-    align-items: center;                
+    color: rgba(5, 9, 51, 0.7);
+    align-items: center;
     padding: 80px;
     border-radius: 8px;
     padding: 0.4em;
     margin-top: 2%;
-    
-}
-   
-form .button-opcao {
-    
-    border-radius: 5px;
-    background-color: rgb(240, 18, 18);
-    padding: 0.9em;
-    margin-top: 30%;
-    border: 2px solid rgb(195, 29, 29);
-    box-shadow: 2px 2px 2px rgb(189, 27, 27);
-    align-items: center;
-    width: 100%;
-    color: rgb(2, 1, 7);
-}
-.nav-opcao ul li{ 
-    background-color:hsl(210, 11%, 96%);
-    padding: 80px;
-    border-radius: 20px;
-    padding: 0.4em;
-    margin-top: 2%;
-    box-shadow: 4px 4px 4px rgb(179, 23, 23);
-/* Todos os li dentro da nav vão ter essas caracteristicas */   
-    
 }
 
-
-.nav-opcao a{
-    color:rgb(0, 0, 3); 
-    /* A ideia é que todos os "as" dentro do li vao ser pretos usando .nav a */ 
-    text-decoration:none; 
-}
-
-.nav-opcao{
-    position:absolute;
-    left:0%;
-    top: 0;
-    /* background-color: hsl(194, 100%, 82%); */
+.body_home {
+    background: linear-gradient(45deg, #9c1111, hsl(350, 75%, 65%), #5f0715);
     background-repeat: no-repeat;
-    min-height: 30vh;
-    min-width: 30vh;
-    display:flex;
-    margin-top: 0.5rem;
-    color: black;
-    /* box-shadow: 2px 2px 2px rgb(1, 2, 1); */
-    /* border: 1px solid rgb(251, 253, 251); */
+    min-height: 100vh;
+    min-width: 100vw;
+    display: flex;
+    align-items: center;
+    justify-content: center;
 }
-
-
-
-

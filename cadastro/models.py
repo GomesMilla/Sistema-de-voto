@@ -62,6 +62,7 @@ class Votacao(models.Model):
         auto_now_add = False,
     )
 
+
     class Meta:
         verbose_name = "Votação"
         verbose_name_plural="Votações"
@@ -77,19 +78,17 @@ class OpcaoVoto(models.Model):
         max_length = 194,
     )
 
-    votacao= models.ForeignKey(
-       Votacao,
-       on_delete=models.CASCADE)
+    votacao= models.ForeignKey(Votacao,on_delete=models.CASCADE)
 
-    codigo = models.CharField(
+    codigo = models.PositiveSmallIntegerField(
         verbose_name="Código eleição:",
-        max_length =10,
-
+        unique = True,
     )
-    num_votos = models.CharField(
+    
+    num_votos = models.PositiveSmallIntegerField(
         verbose_name="Quantidade de votos:",
-        max_length = 1000,
-
+        default=0,
+        
     )
     class Meta:
         verbose_name = "Opção Voto"

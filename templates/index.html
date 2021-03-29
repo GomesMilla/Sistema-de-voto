@@ -17,33 +17,35 @@
 <body>
     <nav class="nav">
         <ul>
-          <li><a href="{%url 'cadastrar_pessoa'%}"><i class="fas fa-plus-circle"></i>Cadastrar pessoa</a></li>
-          <li><a href="{%url 'opcao_de_voto' %}"><i class="fas fa-plus-circle"></i>Opção de voto</a></li>
-          <li><a href="{%url 'Votacao_em_si' %}"><i class="fas fa-plus-circle"></i>Votação</a></li>
-          
+            <li><a href="{%url 'cadastrar_pessoa'%}"><i class="fas fa-plus-circle"></i>Cadastrar pessoa</a></li>
+            <li><a href="{%url 'registrar_opcao_de_voto' %}"><i class="fas fa-plus-circle"></i> Cadastrar opção de voto</a></li>
+            <li><a href="{%url 'registrar_votacao' %}"><i class="fas fa-plus-circle"></i>Cadastrar votação</a></li>
+
         </ul>
-      </nav>
+    </nav>
 
     <main class="container">
         <h1>Cadastrar Pessoa</h1>
-        <form action="">
+        <form method="POST">
+            {% csrf_token %}
             <div>
-                <input class="input-field" type="text" type="name" id="name" placeholder="Nome">
+
+                <label>Nome:</label> {{form.nome}}
             </div>
-      <br>
-        
-            <div >
-                <input class="input-field" type="email" type="email" id="email" placeholder="Email">
+            <br>
+
+            <div>
+                <label>Email</label> {{form.email}}
             </div>
             <div>
-                <p>Data de nascimento:</p>
-                <input class="input-data" type="date" type="date" id="date" id="date" placeholder="Data Fim:">
-                </div>
-            
-        
+
+                <label>Data de nascimento(AAAA-MM-DD)</label> {{form.data_nascimento}}
+            </div>
+
+
             <br>
             <div>
-                <input class="input-field" type="cpf" type="cpf" id="cpf" placeholder="CPF">
+                <label>CPF</label> {{form.cpf}}
             </div>
             <div>
                 <p>(*)Os campos são obrigatórios!</p>
@@ -53,18 +55,18 @@
             </div>
         </form>
         <br>
-       
-            
-            <div class="footer-copyright">
-              <div class="container">
-                        © 2021 
-              </div>
+
+
+        <div class="footer-copyright">
+            <div class="container">
+                © 2021
             </div>
-          </footer>
-              
-        
-        
-        
+        </div>
+        </footer>
+
+
+
+
 
     </main>
 

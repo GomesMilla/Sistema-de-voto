@@ -1,4 +1,4 @@
-#!/home/f0994814/camila/env/bin/python
+#!/home/camila/trabalho/Sistema-de-voto/env/bin/python
 # -*- coding: utf-8 -*-
 import re
 import sys

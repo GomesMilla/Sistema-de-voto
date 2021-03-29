@@ -6,9 +6,9 @@ from cadastro.models import *
 from cadastro.forms import PessoaForm
 from cadastro.forms import VotacaoForm
 from cadastro.forms import OpcaoVotoForm
-
-
 from templates import *
+from django.contrib import messages
+
 
 
 def cadastrar_pessoa(request):
@@ -19,14 +19,19 @@ def cadastrar_pessoa(request):
         form = PessoaForm(request.POST)
 
         if form.is_valid():
-            pessoa = form.save(commit = False)
-
             
+            form.save()
+
             return redirect("cadastrar_pessoa")
+            
+    context={
+        "nome_pagina":"Registrar Pessoa",
+        "form":form
+    }
 
-    return render (request,"index.html", {"form":form})
+    return render (request,"index.html", context)
 
-def Votacao_em_si(request):
+def registrar_votacao(request):
     
     form = VotacaoForm()
 
@@ -34,13 +39,20 @@ def Votacao_em_si(request):
         form = VotacaoForm(request.POST)
 
         if form.is_valid():
-            pessoa = form.save(commit = False)
+           
+            form.save()
 
             
-            return redirect("opcao_de_voto")
-    return render (request,"votacao.html", {"form":form})
+            return redirect("cadastar_pessoa")
 
-def opcao_de_voto(request):
+    context={
+        "nome_pagina":"Registrar votação",
+        "form":form
+        }
+    
+    return render (request,"votacao.html", context)
+
+def registrar_opcao_de_voto(request):
     
     form = OpcaoVotoForm()
 
@@ -48,13 +60,32 @@ def opcao_de_voto(request):
         form = OpcaoVotoForm(request.POST)
 
         if form.is_valid():
-            pessoa = form.save(commit = False)
-
             
-            return redirect("Votacao_em_si")
+            form.save()
+            
+            return redirect("registrar_votacao")
+    
+    context={
+        "nome_pagina":"Registrar opção de voto",
+        "form":form
+    }
 
-    return render (request,"opcao.html", {"form":form})
+    return render (request,"opcao.html", context)
+
+def listar_pessoas(request):
+    allpessoas = Pessoa.objects.all()
+    listaPessoas = []
+
+    for aux in allpessoas:
+        listaPessoas.append(aux)
+
+    context = {
+        "listaPessoas": listaPessoas,
+    }
+
+    return render(request, "listar_pessoas.html", context)
 
 
 
-# Create your views here.
+
+
