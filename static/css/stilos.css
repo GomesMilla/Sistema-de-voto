@@ -1,0 +1,10 @@
+    @import url('https://fonts.googleapis.com/css2?family=Inter:wght@300&display=swap');
+    .nav-wrapper {
+        color: black;
+        background: linear-gradient(45deg, #085b69, hsl(194, 48%, 32%), #98dde9);
+    }
+    
+    .nav {
+        background: linear-gradient(45deg, #085b69, hsl(194, 48%, 32%), #98dde9);
+        color: black;
+    }

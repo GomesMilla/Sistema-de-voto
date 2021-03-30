@@ -16,8 +16,8 @@ Including another URLconf
 from django.contrib import admin
 from django.urls import path
 from cadastro.views import (
-    cadastrar_pessoa, registrar_opcao_de_voto, registrar_votacao, listar_pessoas
-)
+    cadastrar_pessoa, registrar_opcao_de_voto, registrar_votacao, listar_pessoas, listar_votacao, votacoes_disponiveis, home)
+from  administracao.views import *
 
 
 urlpatterns = [
@@ -29,6 +29,16 @@ urlpatterns = [
 
     path("registrar-votacao/", registrar_votacao, name= "registrar_votacao",),
     
-    path("listar-pessoas/", listar_pessoas, name="listar_pessoas",)
+    path("listar-pessoas/", listar_pessoas, name="listar_pessoas",),
+    
+    path("listar-votacao/", listar_votacao, name="listar_votacao",),
+
+    path("votacoes_disponiveis/", votacoes_disponiveis, name="votacoes_disponiveis"),
+
+    path("validacao/", validacao, name="validacao",),
+
+    path("votar/", votar, name="votar",),
+
+    path("", home, name= "home",),
 ]
 

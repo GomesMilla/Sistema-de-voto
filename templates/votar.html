@@ -1,4 +1,4 @@
- {% load static %}
+{% load static %}
 <!DOCTYPE html>
 <html lang="pt-br">
 
@@ -7,14 +7,22 @@
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <script src="https://kit.fontawesome.com/2cbdb08e7a.js" crossorigin="anonymous"></script>
-    <link rel="stylesheet" href="{% static 'css/styles.css' %}">
+    <link rel="stylesheet" href="{% static 'css/stilos.css' %}">
     <link rel="preconnect" href="https://fonts.gstatic.com">
     <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/materialize/1.0.0/css/materialize.min.css">
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/materialize/1.0.0/js/materialize.min.js"></script>
     <title>Listar pessoas</title>
 </head>
-<!-- <main class="container-listar">
-    <h1 class="title">Lista de pessoas cadastradas</h1>
-</main> -->
+
+
+<nav>
+    <div class="nav-wrapper">
+        <a href="#" class="brand-logo right center">Votar</a>
+        <ul id="nav-mobile" class="left hide-on-med-and-down">
+        </ul>
+    </div>
+</nav>
 <nav class="nav">
     <ul>
         <li><a href="{%url 'home' %}"><i class="fas fa-plus-circle"></i> Início</a></li>
@@ -23,34 +31,25 @@
         <li><a href="{%url 'registrar_votacao' %}"><i class="fas fa-plus-circle"></i> Cadastrar votação</a></li>
         <li><a href="{%url 'listar_pessoas' %}"><i class="fas fa-plus-circle"></i> Lista de pessoas cadastradas</a></li>
         <li><a href="{%url 'listar_votacao' %}"><i class="fas fa-plus-circle"></i> Lista de votações</a></li>
-        <li><a href="{%url 'votacoes_disponiveis' %}"><i class="fas fa-plus-circle"></i> Votações disponíveis</a></li>
-        <li><a href="{%url 'votar' %}"><i class="fas fa-plus-circle"></i>Votar</a></li>
+        <li><a href="{%url 'votar' %}"><i class="fas fa-plus-circle"></i> Votar</a></li>
+
     </ul>
 </nav>
 
-<div class="container-table">
-    <h1 class="container-listar">Cadastrados</h1>
-    <br>
-    <br>
-    <table class="table">
-        <thead>
-            <tr>
-                <th>Nome</th>
-                <th>Data nascimento:</th>
-            </tr>
-        </thead>
+<div class="row">
+    <form class="col s12">
+        <div class="row">
+            <div class="input-field col s6">
+                <input placeholder="Ada" id="first_name" type="text" class="validate">
+                <label for="first_name">Nome</label> {{form.pessoa}}
+            </div>
 
-        <tbody>
 
-            {% for aux in listPessoa %}
-            <tr>
-                <td>->{{aux.nome}}</td>
-                <td>->{{aux.data_nascimento}}</td>
-            </tr>
-            {% endfor %}
 
-        </tbody>
-    </table>
+
+    </form>
+    </div>
+
 </div>
 </div>
 

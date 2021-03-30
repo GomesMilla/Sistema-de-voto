@@ -8,6 +8,7 @@ from cadastro.forms import VotacaoForm
 from cadastro.forms import OpcaoVotoForm
 from templates import *
 from django.contrib import messages
+import datetime
 
 
 
@@ -43,7 +44,7 @@ def registrar_votacao(request):
             form.save()
 
             
-            return redirect("cadastar_pessoa")
+            return redirect("cadastrar_pessoa")
 
     context={
         "nome_pagina":"Registrar votação",
@@ -74,18 +75,42 @@ def registrar_opcao_de_voto(request):
 
 def listar_pessoas(request):
     allpessoas = Pessoa.objects.all()
-    listaPessoas = []
-
-    for aux in allpessoas:
-        listaPessoas.append(aux)
-
+    
+    
     context = {
-        "listaPessoas": listaPessoas,
+        "listPessoa": allpessoas,
     }
 
+    
     return render(request, "listar_pessoas.html", context)
 
+def listar_votacao (request):
+    allvotacoes = Votacao.objects.all()
 
+    
+    context = {
+        "listVotacao": allvotacoes,
+    }
+    return render(request, "listavotacao.html", context)
+
+def votacoes_disponiveis (request):
+    today = datetime.date.today()
+
+    allvotacoes = Votacao.objects.filter(data_inicio__lte=today, data_termino__gte=today)
+    
+    context = {
+        "listVotacao": allvotacoes,
+    }
+    return render(request, "votacoesdisponiveis.html", context)
+
+def home(request):
+
+    context = {
+        "home" : home,
+    }
+
+    return render(request, "home.html", context)
+   
 
 
 

@@ -1,0 +1,46 @@
+@import url('https://fonts.googleapis.com/css2?family=Inter:wght@300&display=swap');
+body {
+    background: linear-gradient(45deg, #4756e1, hsl(243, 80%, 52%), #0d0869);
+    background-repeat: no-repeat;
+    min-height: 100vh;
+    min-width: 100vw;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.nav ul li {
+    background-color: hsl(210, 11%, 96%);
+    padding: 80px;
+    border-radius: 20px;
+    padding: 0.4em;
+    margin-top: 2%;
+    box-shadow: 4px 4px 4px rgb(81, 184, 224);
+    /* Todos os li dentro da nav vão ter essas caracteristicas */
+}
+
+.nav {
+    position: absolute;
+    left: 0%;
+    top: 0;
+    background-repeat: no-repeat;
+    min-height: 30vh;
+    min-width: 30vh;
+    display: flex;
+    margin-top: 1.5rem;
+    color: black;
+}
+
+.nav a {
+    color: rgb(0, 0, 3);
+    /* A ideia é que todos os "as" dentro do li vao ser pretos usando .nav a */
+    text-decoration: none;
+}
+
+main h1 {
+    font-weight: 10000;
+    margin-bottom: 2rem;
+    position: relative;
+    font-size: 5.2rem;
+    margin-top: 0%;
+}

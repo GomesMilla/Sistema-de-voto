@@ -20,11 +20,15 @@ body {
 main.container {
     border-radius: 8px;
     background-color: rgb(252, 252, 252);
-    color: rgb(13, 111, 136);
-    max-width: 400px;
-    min-height: 400px;
+    color: rgb(0, 0, 0);
+    max-width: 520px;
+    min-height: 520px;
     padding: 4rem;
-    box-shadow: 5px 5px 5px, rgb(0, 14, 17)
+    box-shadow: 5px 5px 5px, rgb(0, 14, 17);
+    font-weight: 10000;
+    margin-bottom: 2rem;
+    position: relative;
+    border-radius: 6px;
 }
 
 main h1 {
@@ -69,10 +73,10 @@ form .button {
     padding: 0.9em;
     margin-top: 30%;
     border: 2px solid rgb(66, 183, 238);
-    box-shadow: 2px 2px 2px rgb(27, 137, 189);
+    box-shadow: 2px 2px 2px rgb(97, 167, 199);
     align-items: center;
     width: 100%;
-    color: rgb(2, 1, 7);
+    color: rgb(0, 0, 0);
 }
 
 .nav ul li {
@@ -81,7 +85,7 @@ form .button {
     border-radius: 20px;
     padding: 0.4em;
     margin-top: 2%;
-    box-shadow: 4px 4px 4px rgb(23, 129, 179);
+    box-shadow: 4px 4px 4px rgb(81, 184, 224);
     /* Todos os li dentro da nav vão ter essas caracteristicas */
 }
 
@@ -102,6 +106,9 @@ form .button {
     /* A ideia é que todos os "as" dentro do li vao ser pretos usando .nav a */
     text-decoration: none;
 }
+
+
+/* Aqui começa o CSS da Opção de voto */
 
 .body_opcao {
     background: linear-gradient(45deg, #9c1111, hsl(350, 75%, 65%), #5f0715);
@@ -214,12 +221,34 @@ form .button-opcao {
     margin-top: 2%;
 }
 
-.body_home {
-    background: linear-gradient(45deg, #9c1111, hsl(350, 75%, 65%), #5f0715);
-    background-repeat: no-repeat;
-    min-height: 100vh;
-    min-width: 100vw;
-    display: flex;
-    align-items: center;
-    justify-content: center;
+.container-listar {
+    position: absolute;
+    left: 20%;
+    top: 1%;
+    font-size: 10rem;
+    align-items: left;
+    width: 100%;
+    border-radius: 6px;
+    font-size: 2.5rem;
+    color: rgb(0, 0, 0);
+    padding: 80px;
+    align-items: left;
+    border-radius: 8px;
+    padding: 0.4em;
+    margin-top: 0.10%;
+}
+
+.container-table {
+    border-radius: 9px;
+    background-color: rgb(252, 252, 252);
+    color: rgb(0, 0, 0);
+    max-width: 520px;
+    min-height: 520px;
+    padding: 4rem;
+    box-shadow: 5px 5px 5px, rgb(92, 165, 182);
+    font-weight: 10000;
+    margin-bottom: 2rem;
+    position: relative;
+    border-radius: 6px;
+    font-size: 0.8rem
 }

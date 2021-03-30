@@ -12,3 +12,6 @@ class PessoaVoto(models.Model):
         verbose_name = "Votação:"
         verbose_name_plural = "Votações:"
         db_table = "PessoaVoto"
+
+    def __str__(self):
+        return self.votacao
