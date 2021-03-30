@@ -35,9 +35,11 @@ urlpatterns = [
 
     path("votacoes_disponiveis/", votacoes_disponiveis, name="votacoes_disponiveis"),
 
-    path("validacao/", validacao, name="validacao",),
+    path("validacao/<int:id_votacao>/", validacao, name="validacao",),
 
-    path("votar/", votar, name="votar",),
+    path("votar/<int:id_votacao>/<int:id_pessoa>/", votar, name="votar",),
+
+    path("apuracao/", apuracao, name="apuracao",),
 
     path("", home, name= "home",),
 ]

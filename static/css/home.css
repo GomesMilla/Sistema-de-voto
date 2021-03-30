@@ -1,6 +1,14 @@
 @import url('https://fonts.googleapis.com/css2?family=Inter:wght@300&display=swap');
+* {
+    margin: 0%;
+    padding: 0;
+    border: 0;
+    box-sizing: border-box;
+    font-family: 'Inter', sans-serif;
+}
+
 body {
-    background: linear-gradient(45deg, #4756e1, hsl(243, 80%, 52%), #0d0869);
+    background: linear-gradient(45deg, #085b69, hsl(194, 100%, 82%), #085b69);
     background-repeat: no-repeat;
     min-height: 100vh;
     min-width: 100vw;
@@ -40,7 +48,14 @@ body {
 main h1 {
     font-weight: 10000;
     margin-bottom: 2rem;
-    position: relative;
+    position: absolute;
+    left: 25%;
+    top: 26%;
     font-size: 5.2rem;
     margin-top: 0%;
+    color: black;
+}
+
+.footer-copyright {
+    margin-top: 100;
 }

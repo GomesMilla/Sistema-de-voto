@@ -1,10 +1,28 @@
     @import url('https://fonts.googleapis.com/css2?family=Inter:wght@300&display=swap');
     .nav-wrapper {
         color: black;
-        background: linear-gradient(45deg, #085b69, hsl(194, 48%, 32%), #98dde9);
+        background: linear-gradient(45deg, #4692a0, hsl(194, 35%, 50%), #98dde9);
     }
     
     .nav {
-        background: linear-gradient(45deg, #085b69, hsl(194, 48%, 32%), #98dde9);
+        background: linear-gradient(45deg, #2a7482, hsl(195, 35%, 40%), #98dde9);
         color: black;
+    }
+    
+    .btn-waves-effect-waves-light {
+        color: cornsilk;
+    }
+    
+    .input-field {
+        align-items: center;
+    }
+    
+    .main-title {
+        align-items: center;
+    }
+    
+    main h1 {
+        font-weight: 10000;
+        margin-bottom: 2rem;
+        position: relative;
     }

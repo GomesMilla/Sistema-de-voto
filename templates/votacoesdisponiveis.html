@@ -31,7 +31,6 @@
         <li><a href="{%url 'registrar_votacao' %}"><i class="fas fa-plus-circle"></i> Cadastrar votação</a></li>
         <li><a href="{%url 'listar_pessoas' %}"><i class="fas fa-plus-circle"></i> Lista de pessoas cadastradas</a></li>
         <li><a href="{%url 'listar_votacao' %}"><i class="fas fa-plus-circle"></i> Lista de votações</a></li>
-        <li><a href="{%url 'votar' %}"><i class="fas fa-plus-circle"></i> Votar</a></li>
 
     </ul>
 </nav>
@@ -48,9 +47,13 @@
     <tbody>
         {% for aux in listVotacao %}
         <tr>
+
             <td>{{aux.nome}}</td>
             <td>{{aux.data_inicio}}</td>
             <td>{{aux.data_termino}}</td>
+            <td>
+                <a class="btn" href="{%url 'validacao' aux.id %}"><i class="fas fa-plus-circle"></i> Votar</a>
+            </td>
         </tr>
         {% endfor %}
         </tr>

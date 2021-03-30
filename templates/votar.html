@@ -31,22 +31,17 @@
         <li><a href="{%url 'registrar_votacao' %}"><i class="fas fa-plus-circle"></i> Cadastrar votação</a></li>
         <li><a href="{%url 'listar_pessoas' %}"><i class="fas fa-plus-circle"></i> Lista de pessoas cadastradas</a></li>
         <li><a href="{%url 'listar_votacao' %}"><i class="fas fa-plus-circle"></i> Lista de votações</a></li>
-        <li><a href="{%url 'votar' %}"><i class="fas fa-plus-circle"></i> Votar</a></li>
 
     </ul>
 </nav>
 
 <div class="row">
-    <form class="col s12">
-        <div class="row">
-            <div class="input-field col s6">
+    <form class="col s12 center">
+        <div class="row center">
+            <div class="input-field col s6 center">
                 <input placeholder="Ada" id="first_name" type="text" class="validate">
                 <label for="first_name">Nome</label> {{form.pessoa}}
             </div>
-
-
-
-
     </form>
     </div>
 
