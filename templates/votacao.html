@@ -10,15 +10,25 @@
     <link rel="stylesheet" href="{% static 'css/styles.css' %}">
     <link rel="preconnect" href="https://fonts.gstatic.com">
     <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300&display=swap" rel="stylesheet">
+    <script src="https://code.jquery.com/jquery-3.3.1.min.js" integrity="sha256-FgpCb/KJQlLNfOu91ta32o/NMZxltwRo8QtmkMRdAu8=" crossorigin="anonymous"></script>
     <title>VOTAÇÃO</title>
 </head>
 
-<bodys>
+<body>
+    <script>
+        $('document').ready(function() {
+            document.getElementById("id_data_inicio").setAttribute("type", "date");
+            $("#id_data_termino").attr("type", "date");
+            // document.getElementById("id_data_inicio").setAttribute("class", "red-text");
+            // $("#id_data_termino").addClass("text-green");
+        })
+    </script>
+
     <nav class="nav">
         <ul>
             <li><a href="{% url 'cadastrar_pessoa' %}"><i class="fas fa-plus-circle"></i> Cadastrar pessoa</a></li>
             <li><a href="{% url 'registrar_opcao_de_voto' %}"><i class="fas fa-plus-circle"></i> Cadastrar opção de voto</a></li>
-            <li><a href="{% url 'registrar_votacao' %}"><i class="fas fa-plus-circle"></i> Cadastrar votação</a></li>
+            <!-- <li><a href="{% url 'registrar_votacao' %}"><i class="fas fa-plus-circle"></i> Cadastrar votação</a></li> -->
             <li><a href="{%url 'listar_pessoas' %}"><i class="fas fa-plus-circle"></i> Lista de pessoas cadastradas</a></li>
             <li><a href="{%url 'votacoes_disponiveis' %}"><i class="fas fa-plus-circle"></i> Votações disponíveis</a></li>
             <li><a href="{%url 'listar_votacao' %}"><i class="fas fa-plus-circle"></i> Lista de votações</a></li>
@@ -38,12 +48,12 @@
 
             <div>
 
-                <label>Data do inicio:(AAAA-MM-DD)</label> {{form.data_inicio}}
+                <label>Data do inicio:</label> {{form.data_inicio}}
             </div>
 
             <div>
 
-                <label>Data do fim:(AAAAA-MM-DD)</label> {{form.data_termino }}
+                <label>Data do fim:</label> {{form.data_termino }}
             </div>
             <div>
 
@@ -72,6 +82,6 @@
 
     </main>
 
-    </body>
+</body>
 
 </html>

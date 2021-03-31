@@ -18,7 +18,8 @@ from django.urls import path
 from cadastro.views import (
     cadastrar_pessoa, registrar_opcao_de_voto, registrar_votacao, listar_pessoas, listar_votacao, votacoes_disponiveis, home,)
 from  administracao.views import *
-
+# from django.conf import settings
+# from django.contrib.auth import views as auth_views
 
 urlpatterns = [
     path('admin/', admin.site.urls),
@@ -42,5 +43,7 @@ urlpatterns = [
     path("apuracao/<int:id_votacao>/", apuracao, name="apuracao",),
 
     path("", home, name= "home",),
+
+    # path('users/login/', auth_views.login, name='login'),
 ]
 

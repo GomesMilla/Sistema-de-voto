@@ -11,10 +11,20 @@
     <link rel="stylesheet" href="{% static 'css/styles.css' %}">
     <link rel="preconnect" href="https://fonts.gstatic.com">
     <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300&display=swap" rel="stylesheet">
+    <script src="https://code.jquery.com/jquery-3.3.1.min.js" integrity="sha256-FgpCb/KJQlLNfOu91ta32o/NMZxltwRo8QtmkMRdAu8=" crossorigin="anonymous"></script>
+
     <title>Cadastrar pessoa</title>
 </head>
 
 <body>
+    <script>
+        $('document').ready(function() {
+            document.getElementById("id_data_nascimento").setAttribute("type", "date");
+            $("#id_data_termino").attr("type", "date");
+            // document.getElementById("id_data_inicio").setAttribute("class", "red-text");
+            // $("#id_data_termino").addClass("text-green");
+        })
+    </script>
     <nav class="nav">
         <ul>
             <li><a href="{%url 'home' %}"><i class="fas fa-plus-circle"></i> Início</a></li>
@@ -42,7 +52,7 @@
             </div>
             <div>
 
-                <label>Data de nascimento(AAAA-MM-DD)</label> {{form.data_nascimento}}
+                <label>Data de nascimento:</label> {{form.data_nascimento}}
             </div>
 
 

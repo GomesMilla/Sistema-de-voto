@@ -9,6 +9,7 @@ from cadastro.forms import OpcaoVotoForm
 from templates import *
 from django.contrib import messages
 import datetime
+# from django.contrib.auth.decorators import login_required
 
 
 
@@ -102,7 +103,7 @@ def votacoes_disponiveis (request):
         "listVotacao": allvotacoes,
     }
     return render(request, "votacoesdisponiveis.html", context)
-
+# @login_required
 def home(request):
 
     context = {

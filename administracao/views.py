@@ -2,6 +2,8 @@ from django.shortcuts import render, redirect
 from administracao.models import *
 from django.contrib import messages
 from cadastro.models import *
+import datetime
+# from django.contrib.auth.decorators import login_required
 
 def votar(request, id_votacao, id_pessoa):
 
@@ -43,6 +45,11 @@ def apuracao(request, id_votacao):
 
 
 def validacao(request, id_votacao):
+    objvotacao = Votacao.objects.get(pk=id_votacao)
+   
+    if objvotacao.data_inicio > datetime.date.today() or objvotacao.data_termino < datetime.date.today():
+        messages.error(request, "Votação não esta disponivel!")
+        return redirect("listar_votacao")
     if request.POST:
         
         validacao_de_cpf = request.POST.get('cpf', None)
