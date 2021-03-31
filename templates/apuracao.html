@@ -1,0 +1,75 @@
+{% load static %}
+
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <script src="https://kit.fontawesome.com/2cbdb08e7a.js" crossorigin="anonymous"></script>
+    <link rel="stylesheet" href="{% static 'css/stilos.css' %}">
+    <link rel="preconnect" href="https://fonts.gstatic.com">
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/materialize/1.0.0/css/materialize.min.css">
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/materialize/1.0.0/js/materialize.min.js"></script>
+    <title>Apuração</title>
+</head>
+
+<body>
+    <nav>
+        <div class="nav-wrapper">
+            <a href="#" class="brand-logo right center">Votações disponíveis</a>
+            <ul id="nav-mobile" class="left hide-on-med-and-down">
+            </ul>
+        </div>
+    </nav>
+    <nav class="nav">
+        <ul>
+            <li><a href="{%url 'home' %}"><i class="fas fa-plus-circle"></i> Início</a></li>
+            <li><a href="{%url 'cadastrar_pessoa'%}"><i class="fas fa-plus-circle"></i> Cadastrar pessoa</a></li>
+            <li><a href="{%url 'registrar_opcao_de_voto' %}"><i class="fas fa-plus-circle"></i> Cadastrar opção de voto</a></li>
+            <li><a href="{%url 'registrar_votacao' %}"><i class="fas fa-plus-circle"></i> Cadastrar votação</a></li>
+            <li><a href="{%url 'listar_pessoas' %}"><i class="fas fa-plus-circle"></i> Lista de pessoas cadastradas</a></li>
+            <li><a href="{%url 'listar_votacao' %}"><i class="fas fa-plus-circle"></i> Lista de votações</a></li>
+
+        </ul>
+    </nav>
+
+
+    {% if controleOpcaodeVoto %}
+    <div class="container">
+        <table class="responsive-table centered highlight striped z-depth-3">
+            <thead>
+                <tr>
+                    <th>Candidato:</th>
+                    <th>Código:</th>
+                    <th>Quantidade de Votos:</th>
+                </tr>
+            </thead>
+            <tbody class="table-index">
+                {% for controleOpcaodeVoto in controleOpcaodeVoto %}
+                <tr>
+                    <td>{{controleOpcaodeVoto.nome}}</td>
+                    <td class="truncate">{{controleOpcaodeVoto.codigo}}</td>
+                    <td>{{controleOpcaodeVoto.num_votos}}</td>
+                </tr>
+                {% endfor %}
+            </tbody>
+        </table>
+    </div>
+    {% else %}
+    <div class="container">
+        <div class="alert card z-depth-5">
+            <div class="card-content">
+                <p><span>Não existe apurações disponíveis!</span></p>
+            </div>
+        </div><button class="btn waves-effect waves-light" type="submit" name="action">
+            <i class="material-icons right">Entrar</i>
+          </button>
+    </div>
+    {% endif %}
+
+</body>
+
+</html>

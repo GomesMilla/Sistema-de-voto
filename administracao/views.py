@@ -5,30 +5,39 @@ from cadastro.models import *
 
 def votar(request, id_votacao, id_pessoa):
 
+    people = Pessoa.objects.get(pk=id_pessoa)
+    voto = Votacao.objects.get(pk=id_votacao)
+    listoption = OpcaoVoto.objects.filter(votacao=voto)
 
+    if request.POST:
+        idOpcaoVoto = request.POST.get('voto', None)
+        objOpcaoVoto = OpcaoVoto.objects.get(pk=idOpcaoVoto)
+        objOpcaoVoto.num_votos += 1
+        objOpcaoVoto.save()
+    
+        return redirect("home")
+    
     context = {
-        "id_pessoa": id_pessoa,
-        "id_votacao" : id_votacao,
+
+        "listoption" : listoption,
+        "people": people, 
+
     }
-
-
     return render (request,"votar.html", context)
 
     
 
-
-
 def apuracao(request, id_votacao):
-
-    controleOpcaodeVoto = Opcaovoto.objects.get(pk=id_votacao)
-    controlePessoavoto= PessoaVoto.objects.filter(OpcaoVoto=controleOpcaodeVoto)
+    
+    controlevotacao = Votacao.objects.get(pk=id_votacao)
+    controleOpcaodeVoto = OpcaoVoto.objects.filter(votacao=controlevotacao)
 
     context = {
-        "allVotacions" : controlePessoaVoto,
+        "controleOpcaodeVoto" : controleOpcaodeVoto,
         
     }
 
-    return render(request,"home.html",context)
+    return render(request,"apuracao.html", context)
 
 
 
@@ -52,6 +61,13 @@ def validacao(request, id_votacao):
             messages.error(request,"Pessoa não cadastrada!")
     
     return render (request, "validacao.html",)
+
+def resultado_apuracao(request):
+
+    context = {
+        "home" : home,
+    }
+    return render(request, "home.html")
 
 
 # Create your views here.

@@ -10,6 +10,7 @@ class Pessoa(models.Model):
 
     cpf = models.CharField(
         verbose_name = "Número de CPF:",
+        unique=True,
         max_length = 11,
     )
 

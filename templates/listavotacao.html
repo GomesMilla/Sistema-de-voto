@@ -7,14 +7,22 @@
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <script src="https://kit.fontawesome.com/2cbdb08e7a.js" crossorigin="anonymous"></script>
-    <link rel="stylesheet" href="{% static 'css/styles.css' %}">
+    <link rel="stylesheet" href="{% static 'css/stilos.css' %}">
     <link rel="preconnect" href="https://fonts.gstatic.com">
     <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300&display=swap" rel="stylesheet">
-    <title>Listar pessoas</title>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/materialize/1.0.0/css/materialize.min.css">
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/materialize/1.0.0/js/materialize.min.js"></script>
+    <title>Votações</title>
 </head>
-<!-- <main class="container-listar">
-    <h1 class="title">Lista de pessoas cadastradas</h1>
-</main> -->
+
+
+<nav>
+    <div class="nav-wrapper">
+        <a href="#" class="brand-logo right center">Votações</a>
+        <ul id="nav-mobile" class="left hide-on-med-and-down">
+        </ul>
+    </div>
+</nav>
 <nav class="nav">
     <ul>
         <li><a href="{%url 'home' %}"><i class="fas fa-plus-circle"></i> Início</a></li>
@@ -22,37 +30,39 @@
         <li><a href="{%url 'registrar_opcao_de_voto' %}"><i class="fas fa-plus-circle"></i> Cadastrar opção de voto</a></li>
         <li><a href="{%url 'registrar_votacao' %}"><i class="fas fa-plus-circle"></i> Cadastrar votação</a></li>
         <li><a href="{%url 'listar_pessoas' %}"><i class="fas fa-plus-circle"></i> Lista de pessoas cadastradas</a></li>
-        <li><a href="{%url 'listar_votacao' %}"><i class="fas fa-plus-circle"></i> Lista de votações</a></li>
         <li><a href="{%url 'votacoes_disponiveis' %}"><i class="fas fa-plus-circle"></i> Votações disponíveis</a></li>
 
     </ul>
 </nav>
 
-<div class="container-table">
-    <h1 class="container-listar">Lista de votações</h1>
-    <br>
-    <br>
-    <table class="table">
-        <thead>
-            <tr>
-                <th>Nome:</th>
-                <th>Data do inicio:</th>
-                <th>Data do fim::</th>
-            </tr>
-        </thead>
+<table class="centered">
+    <thead>
+        <tr>
+            <th>Nome</th>
+            <th>Data de inicio</th>
+            <th>Data do termino</th>
+        </tr>
+    </thead>
 
-        <tbody>
+    <tbody>
+        {% for aux in listVotacao %}
+        <tr>
 
-            {% for aux in listVotacao %}
-            <tr>
-                <td>->{{aux.nome}}</td>
-                <td>->{{aux.data_inicio}}</td>
-                <td>->{{aux.data_termino}}</td>
-            </tr>
-            {% endfor %}
+            <td>{{aux.nome}}</td>
+            <td>{{aux.data_inicio}}</td>
+            <td>{{aux.data_termino}}</td>
+            <td>
+                <a class="btn" href="{%url 'validacao' aux.id %}"><i class="fas fa-plus-circle"></i> Votar</a>
+            </td>
+            <td>
+                <a class="btn" href="{%url 'apuracao' aux.id %}"><i class="fas fa-plus-circle"></i> Apuração</a>
+            </td>
 
-        </tbody>
-    </table>
+        </tr>
+        {% endfor %}
+        </tr>
+    </tbody>
+</table>
 </div>
 </div>
 

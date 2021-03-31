@@ -33,9 +33,7 @@
         <li><a href="{%url 'listar_votacao' %}"><i class="fas fa-plus-circle"></i> Lista de votações</a></li>
     </ul>
 </nav>
-<main>
-    <h1>Validar CPF</h1>
-</main>
+
 <div class="container center">
     <div class="row">
         <form method="POST">
@@ -45,10 +43,11 @@
                     <input placeholder="0000000000000000" id="first_name" name="cpf" type="text" class="validate">
                     <label for="first_name">CPF</label> {{form.cpf}}
                 </div>
+                <button class="btn waves-effect waves-light" type="submit" name="action">
+                    <i class="material-icons right">Entrar</i>
+                  </button>
             </div>
-            <button class="btn waves-effect waves-light" type="submit" name="action">
-                <i class="material-icons right">Entrar</i>
-              </button>
+
 
 
 
